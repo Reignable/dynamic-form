@@ -7,25 +7,7 @@ export default function App() {
 
   return (
     <DynamicForm
-      configuration={{
-        questions: [
-          {
-            title: 'Question 1',
-            fields: [{ name: 'field1', type: 'text', label: 'Field 1' }],
-          },
-          {
-            title: 'Question 2',
-            fields: [
-              {
-                type: 'dropdown',
-                name: 'field2',
-                label: 'Field 2',
-                options: ['Option1', 'Option2'],
-              },
-            ],
-          },
-        ],
-      }}
+      configuration={formConfiguration}
       onSubmit={(values) => console.log(values)}
     />
   )

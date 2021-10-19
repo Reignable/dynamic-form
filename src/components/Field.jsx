@@ -40,6 +40,10 @@ const Wrapper = styled.div`
     &:focus {
       outline: none;
     }
+
+    & option {
+      color: #000;
+    }
   }
 `
 
@@ -53,7 +57,7 @@ function Field({ type, name, label, options, register }) {
       {type === 'dropdown' ? (
         <select {...sharedProps}>
           {options.map((option) => (
-            <option style={{ color: 'black' }} key={option} value={option}>
+            <option key={option} value={option}>
               {option}
             </option>
           ))}
